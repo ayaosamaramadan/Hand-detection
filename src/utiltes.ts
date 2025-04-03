@@ -49,6 +49,7 @@ export const drawHand = (
           );
           ctx.strokeStyle = "white";
           ctx.lineWidth = 4;
+          
           ctx.stroke();
         }
       }
@@ -57,7 +58,20 @@ export const drawHand = (
       for (let i = 0; i < landmarks.length; i++) {
         const x = landmarks[i][0];
         const y = landmarks[i][1];
-        ctx.fillStyle = "red";
+        // ctx.fillStyle = "red";
+        if (i === 0) {
+          ctx.fillStyle = "red";
+        }
+        else if (i === 2 ||i === 5 || i === 9 || i === 13 || i === 17) {
+          ctx.fillStyle = "green";
+        }
+        else if (i === 8 || i === 4 || i === 12 || i === 16 || i === 20) {
+          ctx.fillStyle = "blue";
+        }
+        else {
+          ctx.fillStyle = "white";
+        }
+        ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.arc(x, y, 5, 0, Math.PI * 2);
         ctx.fill();

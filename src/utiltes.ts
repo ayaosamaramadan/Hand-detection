@@ -47,7 +47,7 @@ export const drawHand = (
             landmarks[secondJoint][0],
             landmarks[secondJoint][1]
           );
-          ctx.strokeStyle = "white";
+          ctx.strokeStyle = "purple";
           ctx.lineWidth = 4;
           
           ctx.stroke();
@@ -69,7 +69,7 @@ export const drawHand = (
           ctx.fillStyle = "blue";
         }
         else {
-          ctx.fillStyle = "white";
+          ctx.fillStyle = "orange";
         }
         ctx.lineWidth = 2;
         ctx.beginPath();

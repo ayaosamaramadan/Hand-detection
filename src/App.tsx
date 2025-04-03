@@ -71,10 +71,22 @@ function App() {
   handleHandPose();
 
   return (
-    <>
-      <Webcam ref={camRef} className="webcam" />
-      <canvas ref={canvaRef} className="canvas" />
-    </>
+   
+      <>
+      <h1 className="text-lime-500 text-3xl md:text-5xl font-extrabold mb-6 md:mb-12 mt-6 md:mt-12 text-center drop-shadow-2xl animate-pulse">
+        Handpose Detection
+      </h1>
+      <div className="bg-gradient-to-r from-green-400 via-lime-500 to-green-400 relative mx-auto left-0 right-0 text-center z-10 w-full max-w-[640px] h-auto aspect-video">
+        <Webcam
+          ref={camRef}
+          className="w-full h-full absolute border-4 border-lime-500 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
+        />
+        <canvas
+          ref={canvaRef}
+          className="absolute w-full h-full"
+        />
+      </div>
+        </>
   );
 }
 
